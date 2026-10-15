@@ -1,0 +1,33 @@
+{
+  "name": "Vibe Coding 安全開發環境",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "vscode.json-language-features",
+          "editor.formatOnSave": true
+        } 
+      },
+      "extensions": [
+        "anthropic.claude-code",
+        "openai.chatgpt",
+        "google.gemini-code-assist",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "mikestead.dotenv",
+        "qwtel.sqlite-viewer"
+      ]
+    }
+  },
+  "forwardPorts": [3000]
+}
